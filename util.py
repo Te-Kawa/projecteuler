@@ -59,3 +59,12 @@ def recurrig_cycle(n):
         if b == 0:
             return 0
         b *= 10
+
+def Is_prime(n):
+    for i in range(2,n):
+        if i != 2 and i%2 == 0:
+            pass
+        if n % i == 0:
+            return False
+        if i > n**0.5:
+            return True
