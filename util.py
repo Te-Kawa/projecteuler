@@ -61,6 +61,8 @@ def recurrig_cycle(n):
         b *= 10
 
 def Is_prime(n):
+    if n == 2:
+        return True
     for i in range(2,n):
         if i != 2 and i%2 == 0:
             pass
