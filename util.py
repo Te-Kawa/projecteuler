@@ -71,9 +71,13 @@ def Is_prime(n):
         if i > n**0.5:
             return True
         
-def Is_pandigital(n):
+def Is_pandigital(n, include_zero=False):
     a = str(n)
     b = set(a)
-    if len(a) == len(b) == max(map(int,str(a))) and '0' not in a:
-        return True
+    if include_zero:
+        if len(a) == len(b) == 10:
+            return True
+    else:
+        if len(a) == len(b) == max(map(int,str(a))) and '0' not in a:
+            return True
     return False
